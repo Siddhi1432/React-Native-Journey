@@ -1,11 +1,14 @@
-import { Text,View, StyleSheet } from "react-native";
+import { Text,View, StyleSheet, Button, Alert } from "react-native";
 
 export default function App(){
+    const handlePress = () => {
+        Alert.alert("Hello Siddhi ","You clicked the button!")
+    }
     return(
         <View style={styles.container}>
-            <Text style={styles.title}>Hi Siddhi</Text>
-            <Text style={styles.subtitle}>Welcome to React Native</Text>
-            <Text style={styles.text}>I am building my first app</Text>
+            <Text style={styles.title}>My First Interactive App</Text>
+            
+            <Button title="Click Me" onPress={handlePress}/>
         </View>
     )
 }
@@ -17,15 +20,7 @@ const styles = StyleSheet.create({
         alignItems: 'center'
     },
     title: {
-        fontSize: 28,
-        fontWeight: 'bold'
-    },
-    subtitle: {
-        fontSize: 18,
-        marginTop: 10
-    },
-    text: {
-        fontSize: 16,
-        marginTop: 5
+        fontSize: 22,
+        marginBottom: 20
     }
 });
