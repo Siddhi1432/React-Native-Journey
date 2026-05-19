@@ -1,48 +1,19 @@
-import { useState } from 'react';
-import { Text, View, StyleSheet, TextInput, Button } from 'react-native';
-
+import { View, StyleSheet } from 'react-native';
+import Greeting from './components/Greetings';
 export default function App() {
-
-  const [name, setName] = useState("");
-
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Enter Your Name 👇</Text>
-
-      <TextInput
-        style={styles.input}
-        placeholder="Type here..."
-        value={name}
-        onChangeText={setName}
-      />
-
-      <Text style={styles.output}>
-        Hello {name} 👋
-      </Text>
-
-      <Button title="Clear" onPress={() => setName("")} />
+      <Greeting name="Siddhi" />
+      <Greeting name="React Native" />
+      <Greeting name="Future Full Stack Developer" />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  title: {
-    fontSize: 22,
-    marginBottom: 10,
-  },
-  input: {
-    borderWidth: 1,
-    width: 200,
-    padding: 10,
-    marginBottom: 10,
-  },
-  output: {
-    fontSize: 18,
-    marginBottom: 10,
-  },
+  container:{
+    flex:1,
+    justifyContent:"center",
+    alignItems:"center"
+  }
 });
